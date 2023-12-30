@@ -33,3 +33,89 @@ exports[`renders navbar unchanged 1`] = `
   </nav>
 </div>
 `;
+
+exports[`renders the product display unchanged 1`] = `
+<div>
+  <div
+    class="flex items-start justify-start gap-40 mt-4"
+  >
+    <img
+      alt="Classic Tee"
+      data-nimg="1"
+      decoding="async"
+      height="800"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=1080&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=1080&q=75 2x"
+      style="color: transparent;"
+      width="500"
+    />
+    <div>
+      <h1
+        class="text-2xl font-normal"
+      >
+        Classic Tee
+      </h1>
+      <div
+        class="divider mt-5 h-[1px] bg-gray-100"
+      />
+      <h2
+        class="text-lg mt-1 font-semibold"
+      >
+        $75.00
+      </h2>
+      <div
+        class="divider mt-2 h-[1px] bg-gray-100"
+      />
+      <p
+        class="mt-5 mb-8 prose text-gray-500"
+      >
+        Lorem ipsum usmod tempor.
+      </p>
+      <div
+        class="flex flex-col items-start justify-center"
+      >
+        <span>
+          <label
+            class="text-gray-500 text-md font-medium"
+          >
+            SIZE
+          </label>
+          <label
+            class="text-red-600"
+          >
+            *
+          </label>
+          <label
+            class="text-black ml-1"
+          />
+        </span>
+        <span
+          class="mt-3 flex gap-1"
+        >
+          <button
+            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+          >
+            S
+          </button>
+          <button
+            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+          >
+            M
+          </button>
+          <button
+            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+          >
+            L
+          </button>
+        </span>
+        <button
+          class="mt-5 py-2 px-5 bg-white border-2 border-solid border-black text-lg font-semibold hover:text-white hover:bg-black"
+        >
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

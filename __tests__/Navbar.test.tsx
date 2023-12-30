@@ -5,6 +5,7 @@ import { render, screen } from "@testing-library/react";
 describe("Navbar", () => {
   it("renders a navbar with cart", () => {
     render(<Navbar />);
+    //check if my cart button is present
     const element = screen.queryByText("My cart");
     expect(element).toBeInTheDocument();
   });

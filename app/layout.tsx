@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={`${inter.className} bg-white`}>
         <Navbar />
-        <main className="m-auto min-w-[300px] max-w-6xl p-4">{children}</main>
+        <main className="m-auto min-w-[300px] max-w-7xl p-4">{children}</main>
       </body>
     </html>
   );
