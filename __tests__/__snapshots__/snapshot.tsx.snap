@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders navbar unchanged 1`] = `
+<div>
+  <nav
+    class="navbar m-auto mt-4 flex-col justify-center items-end bg-gray-100 h-8 w-8/12 px-40"
+    data-testid="navbar"
+  >
+    <div
+      class="mr-10"
+    >
+      <div
+        class="dropdown-end dropdown foc"
+      >
+        <span
+          class="text-gray-500 font-normal text-sm"
+          tabindex="0"
+        >
+          My cart
+        </span>
+        <div
+          class="card border-gray-600 dropdown-content mt-2 card-compact bg-white z-30 w-52"
+          tabindex="0"
+        >
+          <div
+            class="card-body"
+          >
+            Cart Items
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
