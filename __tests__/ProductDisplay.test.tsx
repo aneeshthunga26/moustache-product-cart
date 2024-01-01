@@ -35,27 +35,33 @@ export const product = {
 };
 
 describe("Product Display", () => {
-  it("Displays the product information and Add to Cart button", () => {
+  beforeEach(() => {
     render(<ProductDisplay product={product} />);
-    //check if product title is present
+  });
+
+  it("Displays the product title", () => {
     const productTitle = screen.queryByText(product.title);
     expect(productTitle).toBeInTheDocument();
+  });
 
-    //check if product price is rendered correctly
+  it("Displays the product price", () => {
     const productPrice = screen.queryByText(`\$${product.price.toFixed(2)}`);
     expect(productPrice).toBeInTheDocument();
+  });
 
-    //check if product description is present
+  it("Displays the product description", () => {
     const productDescription = screen.queryByText(product.description);
     expect(productDescription).toBeInTheDocument();
+  });
 
-    //check if all the size option buttons are rendered correctly
+  it("Displays the size options", () => {
     product.sizeOptions.forEach((so) => {
       const sizeOption = screen.queryByText(so.label);
       expect(sizeOption).toBeInTheDocument();
     });
+  });
 
-    //check if add to cart button is present
+  it("Displays the add to cart button", () => {
     const addToCartButton = screen.queryByText("ADD TO CART");
     expect(addToCartButton).toBeInTheDocument();
   });
