@@ -2,6 +2,15 @@ import ProductDisplay from "@/app/components/ProductDisplay";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
+jest.mock("../app/hooks/useUpdateCart", () =>
+  jest.fn(() => {
+    return {
+      mutate: jest.fn(),
+      isPending: false,
+    };
+  }),
+);
+
 export const product = {
   id: 1,
   title: "Classic Tee",

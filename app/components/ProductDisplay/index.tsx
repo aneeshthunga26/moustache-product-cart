@@ -6,6 +6,7 @@ interface ProductDisplayProps {
   product: Product;
 }
 
+//displays product information
 export default function ProductDisplay({ product }: ProductDisplayProps) {
   return (
     <div className="flex items-start justify-start gap-40 mt-4">
@@ -23,7 +24,7 @@ export default function ProductDisplay({ product }: ProductDisplayProps) {
         )}`}</h2>
         <div className="divider mt-2 h-[1px] bg-gray-100" />
         <p className="mt-5 mb-8 prose text-gray-500">{product.description}</p>
-        <ProductForm sizeOptions={product.sizeOptions} />
+        <ProductForm product={product} />
       </div>
     </div>
   );

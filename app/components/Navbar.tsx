@@ -1,4 +1,4 @@
-import MiniCartButton from "./MiniCartButton";
+import MiniCartButton from "./MiniCart/MiniCartButton";
 
 /**
  * Navbar that appears on top of the webpage which contains the Mini cart

@@ -10,22 +10,24 @@ exports[`renders navbar unchanged 1`] = `
       class="mr-10"
     >
       <div
-        class="dropdown-end dropdown foc"
+        class="dropdown-end dropdown"
       >
-        <span
-          class="text-gray-500 font-normal text-sm"
+        <button
+          class="text-gray-500 px-2 font-normal text-sm relative z-50 focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
           tabindex="0"
         >
-          My cart
-        </span>
+          My cart 
+        </button>
         <div
-          class="card border-gray-600 dropdown-content mt-2 card-compact bg-white z-30 w-52"
+          class="card border-gray-300 dropdown-content mt-[-1px] bg-white  w-96 border border-solid"
           tabindex="0"
         >
           <div
             class="card-body"
           >
-            Cart Items
+            <p>
+              Cart has no items
+            </p>
           </div>
         </div>
       </div>
@@ -94,17 +96,17 @@ exports[`renders the product display unchanged 1`] = `
           class="mt-3 flex gap-1"
         >
           <button
-            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+            class="btn-square border-solid border-gray-300 text-gray-500 border"
           >
             S
           </button>
           <button
-            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+            class="btn-square border-solid border-gray-300 text-gray-500 border"
           >
             M
           </button>
           <button
-            class="btn-square border-2 border-solid border-gray-300 text-gray-500"
+            class="btn-square border-solid border-gray-300 text-gray-500 border"
           >
             L
           </button>
