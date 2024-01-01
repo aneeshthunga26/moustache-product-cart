@@ -16,7 +16,7 @@ exports[`renders navbar unchanged 1`] = `
           class="text-gray-500 px-2 font-normal text-sm relative z-50 focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
           tabindex="0"
         >
-          My cart 
+          My cart ( 4 )
         </button>
         <div
           class="card border-gray-300 dropdown-content mt-[-1px] bg-white  w-96 border border-solid"
@@ -25,9 +25,76 @@ exports[`renders navbar unchanged 1`] = `
           <div
             class="card-body"
           >
-            <p>
-              Cart has no items
-            </p>
+            <div
+              class="flex items-start justify-start p-6 gap-10"
+            >
+              <img
+                alt="Classic Tee"
+                data-nimg="1"
+                decoding="async"
+                height="350"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=256&q=75 2x"
+                style="color: transparent;"
+                width="100"
+              />
+              <div>
+                <h3
+                  class="mb-4"
+                >
+                  Classic Tee
+                </h3>
+                <span>
+                  1x 
+                  <label
+                    class="font-semibold"
+                  >
+                    $56.00
+                  </label>
+                </span>
+                <p
+                  class="mt-4"
+                >
+                  Size: S
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start justify-start p-6 gap-10"
+            >
+              <img
+                alt="Classic Tee"
+                data-nimg="1"
+                decoding="async"
+                height="350"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fmrdevelopertestassets.s3.ap-southeast-2.amazonaws.com%2Fclassic-tee.jpg&w=256&q=75 2x"
+                style="color: transparent;"
+                width="100"
+              />
+              <div>
+                <h3
+                  class="mb-4"
+                >
+                  Classic Tee
+                </h3>
+                <span>
+                  3x 
+                  <label
+                    class="font-semibold"
+                  >
+                    $56.00
+                  </label>
+                </span>
+                <p
+                  class="mt-4"
+                >
+                  Size: M
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

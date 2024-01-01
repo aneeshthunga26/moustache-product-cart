@@ -17,7 +17,33 @@ jest.mock("../app/hooks/useCart", () =>
     return {
       isError: false,
       isLoading: false,
-      data: { items: [] },
+      data: {
+        size: 4,
+        items: [
+          {
+            id: "1",
+            productId: 1,
+            productPrice: 56,
+            productSize: "S",
+            productTitle: "Classic Tee",
+            quantity: 1,
+            cartId: "1",
+            imageUrl:
+              "https://mrdevelopertestassets.s3.ap-southeast-2.amazonaws.com/classic-tee.jpg",
+          },
+          {
+            id: "2",
+            productId: 1,
+            productPrice: 56,
+            productSize: "M",
+            productTitle: "Classic Tee",
+            quantity: 3,
+            cartId: "1",
+            imageUrl:
+              "https://mrdevelopertestassets.s3.ap-southeast-2.amazonaws.com/classic-tee.jpg",
+          },
+        ],
+      },
     };
   }),
 );
