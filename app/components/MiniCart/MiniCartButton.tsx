@@ -8,6 +8,12 @@ import useCart from "@/app/hooks/useCart";
 export default function MiniCartButton() {
   const { isError, isLoading, data } = useCart();
   const hasItems = data !== undefined && data.size > 0;
+  const handleClick = () => {
+    const elem = document.activeElement as HTMLElement;
+    if (elem) {
+      elem?.blur();
+    }
+  };
 
   const CartStatus = () => {
     if (isLoading) {
@@ -36,6 +42,7 @@ export default function MiniCartButton() {
       </button>
       <div
         tabIndex={0}
+        onMouseDown={handleClick}
         className="card border-gray-300 dropdown-content mt-[-1px] bg-white  w-96 border border-solid"
       >
         <div className="card-body">
