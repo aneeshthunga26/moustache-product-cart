@@ -1,5 +1,5 @@
 # Getting Started
-
+View the app running on vercel: https://moustache-product-cart.vercel.app/
 - clone the repository to a directory of your choice.
 - open a command shell(terminal) and navigate into the cloned repository
 
