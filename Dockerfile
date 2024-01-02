@@ -67,8 +67,4 @@ ENV HOSTNAME "0.0.0.0"
 COPY ./prisma ./prisma
 COPY --from=deps --chown=nextjs:nodejs /app/node_modules/@prisma ./node_modules/@prisma
 
-# ENTRYPOINT ["npx", "prisma", "db", "push", "--schema=/app/prisma/schema.prisma", "--skip-generate"]
-# server.js is created by next build from the standalone output
-# https://nextjs.org/docs/pages/api-reference/next-config-js/output
-# CMD ["node", "server.js"]
 CMD npx prisma db push --schema=/app/prisma/schema.prisma --skip-generate ; node server.js

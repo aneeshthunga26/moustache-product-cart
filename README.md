@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+- clone the repository to a directory of your choice.
+- open a command shell(terminal) and navigate into the cloned repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Running the app locally
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# With docker-compose
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- You can run the app fully along with the database using docker-compose (requires `docker` and `docker-compose` to be installed on your machine).
+- Run `docker-compose up`
+- The above command should download all the dependencies and spin up the server.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# With local dev server
 
-## Learn More
+- If you would like to run the app locally without using docker the following needs to be installed:
+  - `node`
+  - `npm`
+- Install the dependencies using `npm install` or a node package manager of your choice(yarn, pnpm, etc.)
+- The project requires an instance of postgresdb to be running on your machine. You can use the provided `docker-compose.db.yml` file to spin up an instance configured to work with the app.
+- Run `docker-compose -f docker-compose.db.yml up`
+- Wait for the database to initialise.
+- Open another shell on the same working directory.
+- Run `npx prisma db push` and then `npm run dev`
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## Running tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project contains unit tests using `jest` and `react-testing-library` and automation tests using `playwright`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Running jest
 
-## Deploy on Vercel
+- `npm run test`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Running playwright
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- If the app is running with docker-compose:
+  - Run the app with `docker-compose up`
+  - Open a new shell and Run `npm install` to install the dependencies.
+  - Run `npm run test:e2e`
+- If running locally:
+  - Run the local server as described in the previous section.
+  - Open a new shell and run `npm run test:e2e`
