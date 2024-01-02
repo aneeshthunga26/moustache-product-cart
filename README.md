@@ -1,18 +1,18 @@
-## Getting Started
+# Getting Started
 
 - clone the repository to a directory of your choice.
 - open a command shell(terminal) and navigate into the cloned repository
 
 ## Running the app locally
 
-# With docker-compose
+### With docker-compose
 
 - You can run the app fully along with the database using docker-compose (requires `docker` and `docker-compose` to be installed on your machine).
 - Run `docker-compose up`
 - The above command should download all the dependencies and spin up the server.
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# With local dev server
+### With local dev server
 
 - If you would like to run the app locally without using docker the following needs to be installed:
   - `node`
@@ -29,11 +29,11 @@
 
 The project contains unit tests using `jest` and `react-testing-library` and automation tests using `playwright`.
 
-# Running jest
+### Unit tests
 
 - `npm run test`
 
-# Running playwright
+### Automation tests
 
 - If the app is running with docker-compose:
   - Run the app with `docker-compose up`
