@@ -34,10 +34,9 @@ The project contains unit tests using `jest` and `react-testing-library` and aut
 - `npm run test`
 
 ### Automation tests
-
+- Install dependencies with ```npm install```and ```npx playwright install```
 - If the app is running with docker-compose:
   - Run the app with `docker-compose up`
-  - Open a new shell and Run `npm install` to install the dependencies.
   - Run `npm run test:e2e`
 - If running locally:
   - Run the local server as described in the previous section.
