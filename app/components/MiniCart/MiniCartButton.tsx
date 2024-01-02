@@ -30,7 +30,7 @@ export default function MiniCartButton() {
     <div className="dropdown-end dropdown">
       <button
         tabIndex={0}
-        className="text-gray-500 px-2 font-normal text-sm relative z-50 hover:text-black focus:text-black focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
+        className="text-gray-500 px-2 h-8 font-normal text-sm relative z-50 hover:text-black focus:text-black focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
       >
         {`My cart ${hasItems ? `( ${data.size} )` : ""}`}
       </button>
