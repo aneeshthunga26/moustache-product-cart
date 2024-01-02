@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=prisma
+      - POSTGRES_USER=user
+      - POSTGRES_DB=product-cart
+    networks:
+      - product-cart-network
+
+  product-cart:
+    build: .
+    image: product-cart
+    environment:
+      - DATABASE_URL=postgresql://user:prisma@postgres:5432/product-cart
+      - PRODUCT_API_ENDPOINT=https://3sb655pz3a.execute-api.ap-southeast-2.amazonaws.com/live/product/
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    networks:
+      - product-cart-network
+   
+networks:
+  product-cart-network:
+    driver: bridge

@@ -34,7 +34,7 @@ export async function createCart(): Promise<MiniCart> {
  * @param id the db id of the cart
  * @returns MiniCart populated with size and CartItems
  */
-export async function getCart(id: string | null): Promise<MiniCart | null> {
+export async function getCart(id: number | null): Promise<MiniCart | null> {
   if (!id) return null;
 
   const cart = await prisma.cart.findUnique({
@@ -58,7 +58,7 @@ export async function getCart(id: string | null): Promise<MiniCart | null> {
  * @param cartItem cart item to be updated or created in the database
  */
 export async function updateCartWithItem(
-  cartId: string | null,
+  cartId: number,
   cartItem: MiniCartItem,
 ): Promise<MiniCart> {
   const cart = (await getCart(cartId)) ?? (await createCart());

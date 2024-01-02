@@ -13,7 +13,7 @@ exports[`renders navbar unchanged 1`] = `
         class="dropdown-end dropdown"
       >
         <button
-          class="text-gray-500 px-2 font-normal text-sm relative z-50 focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
+          class="text-gray-500 px-2 font-normal text-sm relative z-50 hover:text-black focus:text-black focus:border-t focus:border-l focus:border-r focus:border-gray-300 foucs:border-solid focus:bg-white focus:h-8"
           tabindex="0"
         >
           My cart ( 4 )

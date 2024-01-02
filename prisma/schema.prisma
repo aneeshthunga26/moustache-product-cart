@@ -6,29 +6,25 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model Cart {
-  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  id        Int     @id @default(autoincrement())
   items     CartItem[]
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-
-  @@map("carts")
 }
 
 model CartItem {
-  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  id           Int @id @default(autoincrement())
   productId    Int
   productTitle String
   productSize  String
   productPrice Int
   imageUrl     String
   quantity     Int
-  cartId       String @db.ObjectId
+  cartId       Int 
   cart         Cart   @relation(fields: [cartId], references: [id], onDelete: Cascade)
-
-  @@map("cartitems")
 }

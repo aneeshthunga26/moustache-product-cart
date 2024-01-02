@@ -7,7 +7,7 @@ async function updateMiniCart(cartItem: MiniCartItem) {
   let cartId = localStorage.getItem(CART_STORAGE_KEY);
   if (cartId === null) cartId = "";
   const res = await axios.post<MiniCart>(`/api/cart?id=${cartId}`, cartItem);
-  localStorage.setItem(CART_STORAGE_KEY, res.data.id);
+  localStorage.setItem(CART_STORAGE_KEY, res.data.id.toString());
   return res.data;
 }
 

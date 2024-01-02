@@ -8,7 +8,7 @@ import {
 //get method to fetch cart. Creates a new cart if there is no cart id passed to it
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const cartId = searchParams.get("id");
+  const cartId = parseInt(searchParams.get("id")!);
   const miniCart = (await getCart(cartId)) ?? (await createCart());
   return Response.json(miniCart);
 }
@@ -16,7 +16,7 @@ export async function GET(req: Request) {
 //post method to update cart items
 export async function POST(req: Request) {
   const { searchParams } = new URL(req.url);
-  const cartId = searchParams.get("id");
+  const cartId = parseInt(searchParams.get("id")!);
   const cartItem = (await req.json()) as MiniCartItem;
   const miniCart = await updateCartWithItem(cartId, cartItem);
   return Response.json(miniCart);
