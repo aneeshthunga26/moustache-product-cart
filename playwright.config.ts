@@ -64,11 +64,11 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: "npm run dev",
-    url: "http://127.0.0.1:3000",
-    reuseExistingServer: true,
-    stdout: "ignore",
-    stderr: "pipe",
-  },
+  // webServer: {
+  //   command: "npm run dev",
+  //   url: "http://127.0.0.1:3000",
+  //   reuseExistingServer: true,
+  //   stdout: "ignore",
+  //   stderr: "pipe",
+  // },
 });
